@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.7.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.7.0/distro-source/core/src/gwt-module.dtd">
+<module>
+  <inherits name="com.google.gwt.user.User"/>
+  <!-- Inherit the default GWT style sheet. You can change -->
+  <!-- the theme of your GWT application by uncommenting -->
+  <!-- any one of the following lines. -->
+  <inherits name="com.google.gwt.user.theme.standard.Standard"/>
+  <!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+  <!-- <inherits name="com.google.gwt.user.theme.dark.Dark"/> -->
+  <!--librerias links-->
+  <inherits name="com.orange.links.Links"/>
+  <inherits name="com.allen_sauer.gwt.dnd.gwt-dnd"/>
+  <!--librerias links-->
+  <!-- optimizaciones juampa -->
+  <!-- -draftCompile-->
+  <!--  <set-property name="user.agent" value="safari,ie9,opera"/> -->
+  <!--<set-property name="user.agent" value="ie9,opera"/>-->
+  <!--set-property name="user.agent" value="opera"/>-->
+  <!--  <set-property name="user.agent" value="safari"/>  -->
+  <!--  <set-property name="user.agent" value="gecko1_8" />-->
+  <!-- fin optimozaciones -->
+  <!--GTX-->
+  <inherits name="com.extjs.gxt.ui.GXT"/>
+  <!--fin GTX-->
+  <inherits name="com.google.gwt.http.HTTP"/>
+  <entry-point class="org.stakeInteraction.client.MainEntryPoint"/>
+  <source path="client"/>
+  <source path="shared"/>
+  <!-- Do not define servlets here, use web.xml -->
+</module>
