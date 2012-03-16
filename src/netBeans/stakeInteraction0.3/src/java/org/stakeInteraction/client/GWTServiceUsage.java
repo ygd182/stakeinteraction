@@ -126,7 +126,7 @@ public static void exportarGml(){
 
             @Override
             public void onSuccess(Void result) {
-                 com.google.gwt.user.client.Window.open("http://localhost:8080/stakeNet0.2.4/DownloadAttachmentServlet","DownloadFile","");
+                 com.google.gwt.user.client.Window.open("DownloadAttachmentServlet","DownloadFile","");
 
             }
         };
