@@ -72,7 +72,7 @@ public class NodoVisual  extends InlineHTML implements Serializable{
     {
         if(texto.length()>5)
         {
-            texto=nodo.getInformacion().getNombre().substring(0,4)+"..";
+            texto=nodo.getInformacion().getNombre().substring(0,5)+"..";
 
         }
         else
