@@ -42,7 +42,7 @@ delimiter $$
 
 CREATE TABLE `documento` (
   `idInformacion` int(11) NOT NULL,
-  `cuerpo` varchar(45) DEFAULT NULL,
+  `cuerpo` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`idInformacion`),
   KEY `FK_idInfo` (`idInformacion`),
   CONSTRAINT `FK_idInfo` FOREIGN KEY (`idInformacion`) REFERENCES `informacion` (`idInformacion`) ON DELETE NO ACTION ON UPDATE NO ACTION
