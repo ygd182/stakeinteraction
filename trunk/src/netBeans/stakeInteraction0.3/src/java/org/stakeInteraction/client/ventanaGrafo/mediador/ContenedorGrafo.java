@@ -63,7 +63,7 @@ public class ContenedorGrafo  extends Util implements Observador{
                  //this.nodoMouseDownHandler=new GrafoNodoHandler(this);
                  this.nodoSeleccionado=null;
 
-                 controller = new DiagramControllerWithContext(600,500,this);
+                 controller = new DiagramControllerWithContext(700,600,this);
                  this.cuentaUsuarioSeleccionado=null;
                  this.grafoIdSeleccionado=-1;
 
@@ -111,7 +111,7 @@ public class ContenedorGrafo  extends Util implements Observador{
               widgetPanel.getElement().getStyle().setMargin(0, Unit.PX);
               widgetPanel.getElement().getStyle().setProperty("border", "0px");
 
-             controller.setFrameSize(520, 300);
+             controller.setFrameSize(620, 400);
               
               controller.addWidget(this.imagenDeEspera,controller.getCanvasWidth()/2,controller.getCanvasHeight()/2);
 

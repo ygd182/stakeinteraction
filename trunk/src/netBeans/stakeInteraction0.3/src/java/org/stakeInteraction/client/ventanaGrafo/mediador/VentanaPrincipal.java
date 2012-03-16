@@ -34,9 +34,9 @@ public class VentanaPrincipal extends Util{
     public VentanaPrincipal()
     {
              this.window=new Window();
-             window.setSize("800px", "535px");
+             window.setSize("950px", "550px");
           //   window.setMaximizable(true);
-             window.setResizable(true);
+             window.setResizable(false);
             
         VentanaGrafoHandler a=new VentanaGrafoHandler(this);
      
