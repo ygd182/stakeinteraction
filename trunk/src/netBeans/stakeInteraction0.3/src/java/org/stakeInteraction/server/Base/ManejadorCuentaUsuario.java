@@ -45,11 +45,11 @@ public class ManejadorCuentaUsuario extends ManejadorBase {
             if (rs.next()) {
                 //sin esto no anda
                 c = new CuentaUsuario(rs.getInt(1), rs.getString(2), rs.getString(3));
-                Grafo g=new Grafo(rs.getInt(5));
+                Grafo g=new Grafo(rs.getInt(4));
               //   System.out.println("idgrafo"+g.getId());
                 c.setGrafo(g);
-                  System.out.println(rs.getString(6));
-                if(rs.getString(6).equals("admin")){
+                  System.out.println(rs.getString(5));
+                if(rs.getString(5).equals("admin")){
                      System.out.println("admin");
                    EstrategiaComportamientoAdmin e=new EstrategiaComportamientoAdmin();
                    c.setEstrategia(e);
@@ -81,14 +81,14 @@ public class ManejadorCuentaUsuario extends ManejadorBase {
 public void agregarCuentaUsuarioConId(CuentaUsuario c){
         try {
          conectar();
-            PreparedStatement st = (PreparedStatement) conexion.prepareStatement("INSERT INTO cuentausuario  VALUES (?, ?, ?, ?,?,?)");
+            PreparedStatement st = (PreparedStatement) conexion.prepareStatement("INSERT INTO cuentausuario  VALUES (?, ?, ?,?,?)");
 
             st.setInt(1, c.getId());
             st.setString(2, c.getNombre());
             st.setString(3, c.getContraseña());
-            st.setInt(4, c.getIdNodo());
-            st.setInt(5,c.getGrafo().getId());
-            st.setString(6, "usuario");
+        //   st.setInt(4, c.getIdNodo());
+            st.setInt(4,c.getGrafo().getId());
+            st.setString(5, "usuario");
 
 
             st.executeUpdate();
@@ -119,14 +119,14 @@ public int agregarCuentaUsuario(CuentaUsuario c){
         
         try {
          conectar();
-            PreparedStatement st = (PreparedStatement) conexion.prepareStatement("INSERT INTO cuentausuario (nombre,contraseña,idNodo,idGrafo,tipo)  VALUES ( ?, ?, ?,?,?)");
+            PreparedStatement st = (PreparedStatement) conexion.prepareStatement("INSERT INTO cuentausuario (nombre,contraseña,idGrafo,tipo)  VALUES ( ?, ?,?,?)");
 
          
             st.setString(1, c.getNombre());
             st.setString(2, c.getContraseña());
-            st.setInt(3, c.getIdNodo());
-            st.setInt(4,c.getGrafo().getId());
-            st.setString(5, "usuario");
+            //st.setInt(3, c.getIdNodo());
+            st.setInt(3,c.getGrafo().getId());
+            st.setString(4, "usuario");
 
 
             st.executeUpdate();
@@ -219,10 +219,10 @@ public void eliminarCuentaUsuario(int id){
             while (rs.next()) {
                 //sin esto no anda
                 c = new CuentaUsuario(rs.getInt(1), rs.getString(2), rs.getString(3));
-                Grafo g=new Grafo(rs.getInt(5));
+                Grafo g=new Grafo(rs.getInt(4));
                 c.setGrafo(g);
 
-               /*  if(rs.getString(6)=="admin"){
+               /*  if(rs.getString(5)=="admin"){
                    EstrategiaComportamientoAdmin e=new EstrategiaComportamientoAdmin();
                    c.setEstrategia(e);
                 }else{

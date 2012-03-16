@@ -120,7 +120,7 @@ form.setMethod(FormPanel.METHOD_POST);
 form.addStyleName("table-center");
 form.addStyleName("demo-panel-padded");
 form.setWidth("275px");
-form.setAction("http://localhost:8080/stakeNet0.2.4/UploadFichero");
+form.setAction("UploadFichero");
 VerticalPanel holder = new VerticalPanel();
 
 final FileUpload upload = new FileUpload();

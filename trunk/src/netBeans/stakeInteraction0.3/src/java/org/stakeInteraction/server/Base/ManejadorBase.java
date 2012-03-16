@@ -23,7 +23,7 @@ protected   Connection conexion;
        
           //  conexion = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1/diseño_schema","root","yor" );
        Class.forName("com.mysql.jdbc.Driver");
-       conexion = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/diseño_schema","root","yor" );
+       conexion = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/disenio_schema","root","pass" );
          return conexion;
     }
 
